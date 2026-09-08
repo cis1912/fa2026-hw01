@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build:
+      context: ../part-1/frontend
+      dockerfile: ../Dockerfile
+      args:
+        VITE_BACKEND_BASE_URL: http://localhost:8000
+    ports:
+      - "8080:80"
+
+  # TODO: add a `backend` service using the `cis1912/lab02-backend` image
